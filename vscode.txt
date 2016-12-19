@@ -51,11 +51,11 @@ html
 		"description": "Log output to console"
 	},
 	
-	"Print to dg": {
-		"prefix": "dg",
-		"body": [
-			"document.getElementById($1)"
-		],
-		"description": "document.getElementById(id)"
-	}
+"Print to dg": {
+	"prefix": "dg",
+	"body": [
+		"document.getElementById($1)"
+	],
+	"description": "document.getElementById(id)"
+}
 
