@@ -1,0 +1,61 @@
+//用户设置
+{
+    "window.zoomLevel": 0,
+    "editor.fontSize": 20,
+    "editor.fontFamily": "consolas",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "workbench.editor.enablePreview": false,
+    "workbench.sideBar.location": "left",
+    "workbench.statusBar.visible": false
+}
+
+//快捷键
+[
+    { 
+		"key": "ctrl+alt+l",           
+		"command": "editor.action.formatDocument",
+		"when": 
+		"editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly" 
+	
+	}
+]
+
+//用户代码片段
+html
+"Print to console document": {
+	"prefix": "document",
+	"body": [
+		"<!DOCTYPE html>",
+		"<html>",
+		"	<head>",
+		"		<meta charset=\"utf-8\">",
+		"		<title></title>",
+		"	</head>",
+		"	<body>",
+		"",
+		"	</body>",
+		"</html>"
+	],
+	"description": "output base document"
+}
+
+//js
+"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	
+	"Print to dg": {
+		"prefix": "dg",
+		"body": [
+			"document.getElementById($1)"
+		],
+		"description": "document.getElementById(id)"
+	}
+
