@@ -1,28 +1,31 @@
-//ÓÃ»§ÉèÖÃ
+//ç”¨æˆ·è®¾ç½®
 {
-    "window.zoomLevel": 0,
-    "editor.fontSize": 20,
-    "editor.fontFamily": "consolas",
-    "editor.formatOnType": true,
-    "editor.formatOnSave": true,
     "files.autoSave": "afterDelay",
-    "workbench.editor.enablePreview": false,
-    "workbench.sideBar.location": "left",
-    "workbench.statusBar.visible": false
+    "editor.formatOnType": true,
+    "editor.fontSize": 20
 }
 
-//¿ì½İ¼ü
+//å¿«æ·é”®
 [
-    { 
+	{ 
 		"key": "ctrl+alt+l",           
 		"command": "editor.action.formatDocument",
-		"when": 
-		"editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly" 
-	
+		"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly" 
+
+	},
+	{
+		"key": "ctrl+shift+/",
+		"command": "editor.action.blockComment",             
+		"when": "editorTextFocus && !editorReadonly" 
+	},
+	{
+		"key": "ctrl+d",     
+		"command": "editor.action.copyLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly" 
 	}
 ]
 
-//ÓÃ»§´úÂëÆ¬¶Î
+//ç”¨æˆ·ä»£ç ç‰‡æ®µ
 html
 "Print to console document": {
 	"prefix": "document",
