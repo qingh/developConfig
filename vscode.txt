@@ -2,7 +2,9 @@
 {
     "files.autoSave": "afterDelay",
     "editor.formatOnType": true,
-    "editor.fontSize": 20
+    "editor.fontSize": 20,
+    "editor.mouseWheelZoom": true,
+    "editor.renderIndentGuides": true
 }
 
 //快捷键
