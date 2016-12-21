@@ -4,7 +4,9 @@
     "editor.formatOnType": true,
     "editor.fontSize": 20,
     "editor.mouseWheelZoom": true,
-    "editor.renderIndentGuides": true
+    "editor.renderIndentGuides": true,
+    "html.format.indentInnerHtml": true,
+    "extensions.autoUpdate": true
 }
 
 //快捷键
