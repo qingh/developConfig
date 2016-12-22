@@ -6,7 +6,8 @@
     "editor.mouseWheelZoom": true,
     "editor.renderIndentGuides": true,
     "html.format.indentInnerHtml": true,
-    "extensions.autoUpdate": true
+    "extensions.autoUpdate": true,
+    "workbench.editor.enablePreview": false
 }
 
 //快捷键
