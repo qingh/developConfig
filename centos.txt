@@ -1,0 +1,70 @@
+rm -rf 文件夹名字
+pm2 start ./bin/www
+50KVM1163   TiBm7HhSPJTaPa6jnxFjSeTi8BStjbFf
+0H3hP8sj1L2fyG0bUV
+
+
+1.
+yum install wget -y 
+
+
+
+2.安装node
+cd /usr/local/src
+wget http://nodejs.org/dist/v6.9.2/node-v6.9.2-linux-x64.tar.gz
+tar --strip-components 1 -xzvf node-v* -C /usr/local
+node -v
+
+
+3.安装pm2
+npm install pm2 -g
+
+
+3.开通端口
+iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
+iptables -I INPUT -p tcp --dport 8081 -j ACCEPT
+
+端口开通后，进行保存
+service iptables save
+
+
+2.安装shadowsocks
+cd /usr/local/src
+wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh
+chmod +x shadowsocks.sh
+./shadowsocks.sh 2>&1 | tee shadowsocks.log
+
+
+
+/etc/nginx/nginx.conf
+
+server{  
+	listen 80;  
+	server_name fitbit.is26.com;  
+	index index.html index.htm index.php default.html default.htm default.php;
+
+	location / {  
+		proxy_set_header X-Real-IP $remote_addr;  
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;  
+		proxy_set_header Host $http_host;  
+		proxy_set_header X-NginX-Proxy true;  
+		proxy_pass http://127.0.0.1:1337/;  
+		proxy_redirect off;  
+	}
+}
+
+
+
+开放端口
+http://www.cnblogs.com/cnjava/p/3311950.html
+搭建shadowsocks服务器
+http://jingyan.baidu.com/article/4f34706e372b6ce387b56d9b.html
+nginx安装及反向代理
+https://gist.github.com/ifels/c8cfdfe249e27ffa9ba1
+
+
+
+
+
+
