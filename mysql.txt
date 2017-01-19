@@ -1,6 +1,6 @@
-查看mysql	rpm -qa | grep mysql
+查看mysql	  rpm -qa | grep mysql
 卸载mysql   rpm -e --nodeps mysql-libs
-安装 		yum install mysql-server -y
+安装 		    yum install mysql-server -y
 
 启动mysql
 service mysqld start
