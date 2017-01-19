@@ -1,0 +1,55 @@
+查看mysql	rpm -qa | grep mysql
+卸载mysql   rpm -e --nodeps mysql-libs
+安装 		yum install -y mysql-server
+
+启动mysql
+service mysqld start
+
+重启mysql
+service mysqld restart
+
+
+设置开机启动
+chkconfig mysqld on
+
+查看mysql服务是不是开机自动启动
+chkconfig --list | grep mysqld
+
+
+root账号设置密码（在mysql命令行外面）
+mysqladmin -u root password '123456'
+
+
+进入mysql命令行
+mysql -u root -p
+
+
+查询密码
+mysql表
+select host,user,password from user;
+
+
+解决 10038 错误
+iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
+
+解决 1130 错误
+sql 语句
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION; 
+刷新权限
+flush privileges;
+
+
+修改mysql编码
+http://www.centoscn.com/CentosBug/softbug/2014/0226/2474.html
+文件路径
+/etc  my.cnf
+[mysqld]
+default-character-set=utf8  
+character_set_server=utf8
+[client]  
+default-character-set=utf8
+
+
+
+查看监听端口
+netstat -anp
