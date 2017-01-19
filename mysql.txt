@@ -1,47 +1,47 @@
-²é¿´mysql	rpm -qa | grep mysql
-Ğ¶ÔØmysql   rpm -e --nodeps mysql-libs
-°²×° 		yum install -y mysql-server
+æŸ¥çœ‹mysql	rpm -qa | grep mysql
+å¸è½½mysql   rpm -e --nodeps mysql-libs
+å®‰è£… 		yum install mysql-server -y
 
-Æô¶¯mysql
+å¯åŠ¨mysql
 service mysqld start
 
-ÖØÆômysql
+é‡å¯mysql
 service mysqld restart
 
 
-ÉèÖÃ¿ª»úÆô¶¯
+è®¾ç½®å¼€æœºå¯åŠ¨
 chkconfig mysqld on
 
-²é¿´mysql·şÎñÊÇ²»ÊÇ¿ª»ú×Ô¶¯Æô¶¯
+æŸ¥çœ‹mysqlæœåŠ¡æ˜¯ä¸æ˜¯å¼€æœºè‡ªåŠ¨å¯åŠ¨
 chkconfig --list | grep mysqld
 
 
-rootÕËºÅÉèÖÃÃÜÂë£¨ÔÚmysqlÃüÁîĞĞÍâÃæ£©
+rootè´¦å·è®¾ç½®å¯†ç ï¼ˆåœ¨mysqlå‘½ä»¤è¡Œå¤–é¢ï¼‰
 mysqladmin -u root password '123456'
 
 
-½øÈëmysqlÃüÁîĞĞ
+è¿›å…¥mysqlå‘½ä»¤è¡Œ
 mysql -u root -p
 
 
-²éÑ¯ÃÜÂë
-mysql±í
+æŸ¥è¯¢å¯†ç 
+mysqlè¡¨
 select host,user,password from user;
 
 
-½â¾ö 10038 ´íÎó
+è§£å†³ 10038 é”™è¯¯
 iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
 
-½â¾ö 1130 ´íÎó
-sql Óï¾ä
+è§£å†³ 1130 é”™è¯¯
+sql è¯­å¥
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION; 
-Ë¢ĞÂÈ¨ÏŞ
+åˆ·æ–°æƒé™
 flush privileges;
 
 
-ĞŞ¸Ämysql±àÂë
+ä¿®æ”¹mysqlç¼–ç 
 http://www.centoscn.com/CentosBug/softbug/2014/0226/2474.html
-ÎÄ¼şÂ·¾¶
+æ–‡ä»¶è·¯å¾„
 /etc  my.cnf
 [mysqld]
 default-character-set=utf8  
@@ -51,5 +51,5 @@ default-character-set=utf8
 
 
 
-²é¿´¼àÌı¶Ë¿Ú
+æŸ¥çœ‹ç›‘å¬ç«¯å£
 netstat -anp
