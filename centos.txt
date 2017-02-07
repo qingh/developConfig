@@ -1,8 +1,5 @@
 rm -rf 文件夹名字
 pm2 start ./bin/www
-50KVM1163   TiBm7HhSPJTaPa6jnxFjSeTi8BStjbFf
-0H3hP8sj1L2fyG0bUV
-
 
 1.
 yum install wget -y 
