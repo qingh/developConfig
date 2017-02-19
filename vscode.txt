@@ -1,4 +1,4 @@
-//用户设置
+//设置
 {
     "files.autoSave": "afterDelay",
     "editor.formatOnType": true,
