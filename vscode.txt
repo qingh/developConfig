@@ -2,7 +2,6 @@
 {
     "files.autoSave": "afterDelay",
     "editor.formatOnType": true,
-    "editor.fontSize": 20,
     "editor.mouseWheelZoom": true,
     "editor.renderIndentGuides": true,
     "html.format.indentInnerHtml": true,
