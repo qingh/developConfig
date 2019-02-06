@@ -39,49 +39,9 @@ chmod +x shadowsocks-all.sh
 
 
 
-/etc/nginx/nginx.conf
-
-server{  
-	listen 80;  
-	server_name qingh.me;  
-	index index.html index.htm index.php default.html default.htm default.php;
-
-	location / {  
-		proxy_set_header X-Real-IP $remote_addr;  
-		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;  
-		proxy_set_header Host $http_host;  
-		proxy_set_header X-NginX-Proxy true;  
-		proxy_pass http://127.0.0.1:8080/;  
-		proxy_redirect off; 
-	}
-}
-	
-server{  
-	listen 80;  
-	server_name www.qingh.me;  
-	index index.html index.htm index.php default.html default.htm default.php;
-
-	location / {  
-		proxy_set_header X-Real-IP $remote_addr;  
-		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;  
-		proxy_set_header Host $http_host;  
-		proxy_set_header X-NginX-Proxy true;  
-		proxy_pass http://127.0.0.1:8080/;  
-		proxy_redirect off; 
-	}
-}
-
 
 
 开放端口
 http://www.cnblogs.com/cnjava/p/3311950.html
-搭建shadowsocks服务器
-http://jingyan.baidu.com/article/4f34706e372b6ce387b56d9b.html
 nginx安装及反向代理
 https://gist.github.com/ifels/c8cfdfe249e27ffa9ba1
-
-
-
-
-
-
